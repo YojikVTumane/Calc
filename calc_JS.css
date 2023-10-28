@@ -1,0 +1,105 @@
+.UI-calc{
+	margin: 0;
+	width: auto;
+	height: 650px;
+	/*border: 1px solid #000;*/
+	background: #cde4fa;
+	font-family: Arial;
+}
+
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.UI-fantom-screen{
+	height: 100px;
+	padding: 5px;
+	display: grid;
+	align-items: center;
+	/*background: #6ebadb;*/
+	/*margin-right: 35px;*/
+}
+
+.UI-fantom-screen p1 {
+	text-align: right;
+	font-size: 3rem;
+	margin: 0;
+	margin-right: 15px;
+	opacity: 50%;
+}
+
+.UI-calc-screen{
+	height: 150px;
+	padding: 5px;
+	display: grid;
+	align-items: center;
+	/*margin-right: 35px;*/
+	/*background: #97d5f0;*/
+}
+
+.UI-calc-screen p {
+	text-align: right;
+	font-size: 7rem;
+	margin: 0;
+}
+
+p.custom_selection::selection {
+  background: #67a4cf;
+  color: #fff;
+}
+
+.UI-calc-screen p::after {
+  content: "";
+  width: 4px;
+  height: 100px;
+  margin-left: 5px;
+  /*box-shadow: 0 0 1px 1px rgba(0, 0, 0, 1);*/
+  background: #000;
+  display: inline-block;
+  animation: cursor-blink 1.5s steps(1) infinite;
+}
+
+
+.buttons {
+	display: grid;
+	grid-template-areas:
+	"ac pm prc div"
+	"seven eight nine myltiply"
+	"four five six minus"
+	"one two three plus"
+	"zero zero dot equal";
+	/*grid-gap: 10px;*/
+}
+
+.btn{
+	width: auto;
+	height: auto;
+	background: #9abad9;
+	/*background: linear-gradient(to top, #ADD8E6, 20%, cyan);*/
+	text-align: center;
+	line-height: 80px;
+	font-size: 4rem;
+	cursor: pointer;
+	user-select: none;
+}
+
+.btn:hover {
+	filter: brightness(105%);
+}
+
+.btn:active {
+	filter: brightness(95%);
+}
+
+.btn.zero {
+	grid-area: zero;
+	width: 100%;
+}
+
+.btn.lightblue {
+	background: #487299;
+	color: #FFF;
+
+}
